@@ -1,0 +1,6 @@
+[2026-06-02 02:03:09] ADD | Product: Pen | Qty: 100 | Price: ₹50.00
+[2026-06-02 02:04:45] ADD | Product: Shree Note Book | Qty: 200 | Price: ₹70.00
+[2026-06-02 02:05:17] ADD | Product: Pencil | Qty: 100 | Price: ₹10.00
+[2026-06-02 02:07:19] ADD | Product: Gel Pen | Qty: 200 | Price: ₹20.00
+[2026-06-02 02:08:00] ADD | Product: Colour Box | Qty: 90 | Price: ₹60.00
+[2026-06-02 02:09:01] SELL | Product: Pen | Qty: 2 | Price: ₹50.00

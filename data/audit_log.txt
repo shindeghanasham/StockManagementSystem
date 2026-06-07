@@ -1,0 +1,90 @@
+[2026-06-02 23:40:41] ADD | Product: Parle-G Biscuit | Qty: 150 | Price: ₹10.00
+[2026-06-02 23:43:33] ADD | Product: Good Day Biscuit | Qty: 120 | Price: ₹20.00
+[2026-06-02 23:45:23] ADD | Product: Amul Milk 500ml | Qty: 80 | Price: ₹28.00
+[2026-06-02 23:47:08] ADD | Product: Tata Salt 1kg | Qty: 100 | Price: ₹25.00
+[2026-06-02 23:48:44] ADD | Product: Maggi Noodles | Qty: 200 | Price: ₹14.00
+[2026-06-02 23:50:39] ADD | Product: Coca Cola 750ml | Qty: 90 | Price: ₹40.00
+[2026-06-02 23:52:10] ADD | Product: Dairy Milk Chocolate | Qty: 70 | Price: ₹40.00
+[2026-06-02 23:54:25] ADD | Product: Surf Excel 1kg | Qty: 500 | Price: ₹200.00
+[2026-06-03 01:02:41] ADD | Product: Colgate Toothpaste | Qty: 110 | Price: ₹55.00
+[2026-06-03 01:11:57] SELL | Product: Tata Salt 1kg | Qty: 24 | Price: ₹25.00
+[2026-06-03 01:11:57] SELL | Product: Amul Milk 500ml | Qty: 60 | Price: ₹28.00
+[2026-06-03 01:11:57] SELL | Product: Dairy Milk Chocolate | Qty: 34 | Price: ₹40.00
+[2026-06-03 01:11:57] BILL | Product: INV-20260603-D2B6BEA4 | Qty: 3 | Price: ₹4295.00
+[2026-06-03 09:48:49] UPDATE | User: admin | Details: Coca Cola 750ml | Count: 0 | Amount: ₹40.00
+[2026-06-03 10:27:08] SELL | User: user | Details: Colgate Toothpaste | Count: 5 | Amount: ₹55.00
+[2026-06-03 10:27:08] SELL | User: user | Details: Maggi Noodles | Count: 13 | Amount: ₹14.00
+[2026-06-03 10:27:08] SELL | User: user | Details: Surf Excel 1kg | Count: 50 | Amount: ₹200.00
+[2026-06-03 10:27:08] BILL | User: user | Details: INV-20260603-20B6B5D5 | Count: 3 | Amount: ₹12339.00
+[2026-06-03 13:26:13] SELL | User: admin | Details: Tata Salt 1kg | Count: 40 | Amount: ₹25.00
+[2026-06-03 13:26:13] SELL | User: admin | Details: Parle-G Biscuit | Count: 70 | Amount: ₹10.00
+[2026-06-03 13:26:13] SELL | User: admin | Details: Surf Excel 1kg | Count: 60 | Amount: ₹200.00
+[2026-06-03 13:26:13] BILL | User: admin | Details: INV-20260603-2572EC91 | Count: 3 | Amount: ₹16166.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Samsung Galaxy A35 5G | Count: 177 | Amount: ₹676.00
+[2026-06-06 23:08:39] ADD_CATEGORY | User: admin | Details: Mobile Accessories | Count: 0 | Amount: ₹0.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Redmi Note 14 | Count: 24 | Amount: ₹2455.00
+[2026-06-06 23:08:39] ADD_CATEGORY | User: admin | Details: Home & Kitchen | Count: 0 | Amount: ₹0.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: boAt Airdopes 141 | Count: 68 | Amount: ₹979.00
+[2026-06-06 23:08:39] ADD_CATEGORY | User: admin | Details: Fashion | Count: 0 | Amount: ₹0.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Noise Smart Watch | Count: 26 | Amount: ₹1288.00
+[2026-06-06 23:08:39] ADD_CATEGORY | User: admin | Details: Grocery | Count: 0 | Amount: ₹0.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: HP Wireless Mouse | Count: 38 | Amount: ₹1245.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Dell Keyboard | Count: 24 | Amount: ₹977.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Sony Bluetooth Speaker | Count: 122 | Amount: ₹1966.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Mi Power Bank 20000mAh | Count: 49 | Amount: ₹936.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: JBL Headphones | Count: 146 | Amount: ₹982.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: SanDisk 128GB Pendrive | Count: 195 | Amount: ₹1495.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Prestige Pressure Cooker | Count: 154 | Amount: ₹1581.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Pigeon Non Stick Pan | Count: 74 | Amount: ₹2282.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Milton Water Bottle | Count: 108 | Amount: ₹1070.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Cello Lunch Box | Count: 130 | Amount: ₹500.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Philips LED Bulb | Count: 22 | Amount: ₹1254.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: US Polo T-Shirt | Count: 197 | Amount: ₹820.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Levi's Jeans | Count: 158 | Amount: ₹1523.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Puma Running Shoes | Count: 151 | Amount: ₹2375.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Campus Sneakers | Count: 59 | Amount: ₹2079.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Wildcraft Backpack | Count: 79 | Amount: ₹1791.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Tata Tea Premium | Count: 163 | Amount: ₹1882.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Aashirvaad Atta 5kg | Count: 69 | Amount: ₹430.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Fortune Sunflower Oil | Count: 162 | Amount: ₹2454.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Maggi Noodles Pack | Count: 125 | Amount: ₹798.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Parle-G Biscuit | Count: 83 | Amount: ₹555.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Amul Butter | Count: 166 | Amount: ₹2274.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Dabur Honey | Count: 139 | Amount: ₹2124.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Colgate Toothpaste | Count: 114 | Amount: ₹1851.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Dettol Hand Wash | Count: 152 | Amount: ₹1883.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Surf Excel Detergent | Count: 25 | Amount: ₹2417.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Realme Narzo 80 | Count: 99 | Amount: ₹1143.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: OnePlus Nord CE | Count: 182 | Amount: ₹1824.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Samsung 32 Inch Smart TV | Count: 200 | Amount: ₹1841.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: LG Refrigerator | Count: 108 | Amount: ₹603.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Whirlpool Washing Machine | Count: 154 | Amount: ₹353.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Orient Ceiling Fan | Count: 108 | Amount: ₹1767.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Bajaj Mixer Grinder | Count: 30 | Amount: ₹1594.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Havells Iron | Count: 30 | Amount: ₹897.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Syska LED Tube | Count: 100 | Amount: ₹1605.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Canon Inkjet Printer | Count: 63 | Amount: ₹1479.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Casio Calculator | Count: 164 | Amount: ₹1154.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Classmate Notebook | Count: 51 | Amount: ₹1656.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Faber-Castell Pen Set | Count: 136 | Amount: ₹2276.00
+[2026-06-06 23:08:39] ADD | User: admin | Details: Amazon Basics Tripod | Count: 27 | Amount: ₹229.00
+[2026-06-06 23:08:40] ADD | User: admin | Details: Logitech Webcam | Count: 110 | Amount: ₹1527.00
+[2026-06-06 23:08:40] ADD | User: admin | Details: Zebronics Soundbar | Count: 120 | Amount: ₹591.00
+[2026-06-06 23:08:40] ADD | User: admin | Details: Fire-Boltt Smartwatch | Count: 75 | Amount: ₹1718.00
+[2026-06-06 23:08:40] ADD | User: admin | Details: Portronics Extension Board | Count: 132 | Amount: ₹1875.00
+[2026-06-06 23:08:40] ADD | User: admin | Details: Kent Water Purifier | Count: 124 | Amount: ₹187.00
+[2026-06-06 23:08:40] ADD | User: admin | Details: Crompton Air Cooler | Count: 106 | Amount: ₹2476.00
+[2026-06-06 23:44:13] DELETE | User: admin | Details: Parle-G Biscuit | Count: 80 | Amount: ₹10.00
+[2026-06-06 23:44:24] DELETE | User: admin | Details: Good Day Biscuit | Count: 120 | Amount: ₹20.00
+[2026-06-06 23:44:33] DELETE | User: admin | Details: Amul Milk 500ml | Count: 20 | Amount: ₹28.00
+[2026-06-06 23:44:43] DELETE | User: admin | Details: Tata Salt 1kg | Count: 36 | Amount: ₹25.00
+[2026-06-06 23:44:54] DELETE | User: admin | Details: Maggi Noodles | Count: 187 | Amount: ₹14.00
+[2026-06-06 23:45:04] DELETE | User: admin | Details: Coca Cola 750ml | Count: 90 | Amount: ₹40.00
+[2026-06-06 23:45:13] DELETE | User: admin | Details: Dairy Milk Chocolate | Count: 36 | Amount: ₹40.00
+[2026-06-06 23:45:24] DELETE | User: admin | Details: Surf Excel 1kg | Count: 390 | Amount: ₹200.00
+[2026-06-06 23:45:36] DELETE | User: admin | Details: Colgate Toothpaste | Count: 105 | Amount: ₹55.00
+[2026-06-06 23:50:24] SELL | User: admin | Details: Classmate Notebook | Count: 10 | Amount: ₹1656.00
+[2026-06-06 23:50:24] SELL | User: admin | Details: Samsung Galaxy A35 5G | Count: 20 | Amount: ₹676.00
+[2026-06-06 23:50:24] SELL | User: admin | Details: HP Wireless Mouse | Count: 37 | Amount: ₹1245.00
+[2026-06-06 23:50:24] BILL | User: admin | Details: INV-20260606-D2F96A76 | Count: 3 | Amount: ₹89851.00
+[2026-06-06 23:53:46] UPDATE | User: admin | Details: HP Wireless Mouse | Count: 0 | Amount: ₹1245.00

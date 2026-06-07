@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Downloads/poi-5.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Downloads/poi-ooxml-5.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Downloads/xmlbeans-5.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Downloads/commons-io-2.16.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Downloads/commons-collections4-4.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Downloads/commons-compress-1.23.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Downloads/commons-math3-3.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Downloads/log4j-api-2.23.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Downloads/log4j-core-2.23.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Downloads/poi-ooxml-full-5.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Downloads/javase-3.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Downloads/core-3.5.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
