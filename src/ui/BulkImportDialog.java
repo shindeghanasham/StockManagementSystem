@@ -10,7 +10,6 @@ import java.awt.event.*;
 import java.io.File;
 import java.util.Map;
 import java.util.List;
-import java.util.ArrayList;
 
 public class BulkImportDialog extends JDialog {
 	/**
@@ -74,7 +73,7 @@ public class BulkImportDialog extends JDialog {
 		titleLabel.setFont(new Font("Arial", Font.BOLD, 22));
 		titleLabel.setForeground(Color.WHITE);
 
-		JLabel subtitleLabel = new JLabel("Import multiple products from CSV file");
+		JLabel subtitleLabel = new JLabel("Import multiple products from Excel file");
 		subtitleLabel.setFont(new Font("Arial", Font.PLAIN, 12));
 		subtitleLabel.setForeground(Color.WHITE);
 
@@ -90,7 +89,7 @@ public class BulkImportDialog extends JDialog {
 
 	private JPanel createFileSelectionPanel() {
 		JPanel panel = new JPanel(new GridBagLayout());
-		panel.setBorder(BorderFactory.createTitledBorder("Select CSV File"));
+		panel.setBorder(BorderFactory.createTitledBorder("Select Excel File"));
 		panel.setBackground(Color.WHITE);
 
 		GridBagConstraints gbc = new GridBagConstraints();
@@ -100,7 +99,7 @@ public class BulkImportDialog extends JDialog {
 		// File selection
 		gbc.gridx = 0;
 		gbc.gridy = 0;
-		panel.add(new JLabel("CSV File:"), gbc);
+		panel.add(new JLabel("Excel File:"), gbc);
 
 		gbc.gridx = 1;
 		fileLabel = new JLabel("No file selected");
@@ -121,7 +120,7 @@ public class BulkImportDialog extends JDialog {
 		panel.add(new JLabel("Need template?"), gbc);
 
 		gbc.gridx = 1;
-		templateButton = new JButton("Download CSV Template");
+		templateButton = new JButton("Download Excel Template");
 		templateButton.setBackground(new Color(46, 204, 113));
 		templateButton.setForeground(Color.WHITE);
 		templateButton.addActionListener(e -> downloadTemplate());
@@ -131,7 +130,7 @@ public class BulkImportDialog extends JDialog {
 		JPanel infoPanel = new JPanel();
 		infoPanel.setBorder(BorderFactory.createTitledBorder("File Requirements"));
 		infoPanel.setLayout(new GridLayout(4, 1, 5, 5));
-		infoPanel.add(new JLabel("• Supported formats: .csv"));
+		infoPanel.add(new JLabel("• Supported formats: .xlsx, .xls"));
 		infoPanel.add(new JLabel("• Max file size: 10MB"));
 		infoPanel.add(new JLabel("• First row must contain headers"));
 		infoPanel.add(new JLabel("• Required fields: Product ID, Name, Category, Quantity, Sell Price"));
@@ -206,8 +205,8 @@ public class BulkImportDialog extends JDialog {
 
 	private void browseFile() {
 		JFileChooser fileChooser = new JFileChooser();
-		fileChooser.setDialogTitle("Select CSV File");
-		fileChooser.setFileFilter(new javax.swing.filechooser.FileNameExtensionFilter("CSV Files", "csv"));
+		fileChooser.setDialogTitle("Select Excel File");
+		fileChooser.setFileFilter(new javax.swing.filechooser.FileNameExtensionFilter("Excel Files", "xlsx", "xls"));
 
 		int result = fileChooser.showOpenDialog(this);
 		if (result == JFileChooser.APPROVE_OPTION) {
@@ -242,8 +241,9 @@ public class BulkImportDialog extends JDialog {
 					File template = get();
 					if (template != null) {
 						JFileChooser fileChooser = new JFileChooser();
-					fileChooser.setSelectedFile(new File("product_import_template.csv"));
-					int result = fileChooser.showSaveDialog(BulkImportDialog.this);
+						fileChooser.setSelectedFile(new File("product_import_template.xlsx"));
+						int result = fileChooser.showSaveDialog(BulkImportDialog.this);
+
 						if (result == JFileChooser.APPROVE_OPTION) {
 							File destFile = fileChooser.getSelectedFile();
 							java.nio.file.Files.copy(template.toPath(), destFile.toPath(),
@@ -286,7 +286,7 @@ public class BulkImportDialog extends JDialog {
 				importButton.setEnabled(false);
 				browseButton.setEnabled(false);
 
-Map<String, Object> result = bulkImportService.importProductsFromCsv(selectedFile);
+				Map<String, Object> result = bulkImportService.importProductsFromExcel(selectedFile);
 
 				progressBar.setIndeterminate(false);
 				return result;

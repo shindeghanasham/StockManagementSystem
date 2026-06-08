@@ -12,10 +12,6 @@ import java.util.List;
 import java.util.*;
 
 public class BillingUI extends JDialog {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private StockService stockService;
 	private AuthService authService;
 	private SettingsService settingsService;
@@ -148,7 +144,7 @@ public class BillingUI extends JDialog {
 		cartTable = new JTable(cartTableModel);
 		cartTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
-		// Handle cell editing
+		// Handle cell editing with proper parsing
 		cartTable.getModel().addTableModelListener(e -> {
 			int row = e.getFirstRow();
 			int col = e.getColumn();
@@ -293,7 +289,7 @@ public class BillingUI extends JDialog {
 				boolean found = false;
 				for (int i = 0; i < cartTableModel.getRowCount(); i++) {
 					if (cartTableModel.getValueAt(i, 0).equals(product.getName())) {
-						int currentQty = (int) cartTableModel.getValueAt(i, 1);
+						int currentQty = parseQuantity(cartTableModel.getValueAt(i, 1));
 						cartTableModel.setValueAt(currentQty + quantity, i, 1);
 						updateCartItem(i);
 						found = true;
@@ -318,17 +314,42 @@ public class BillingUI extends JDialog {
 		}
 	}
 
+	private int parseQuantity(Object value) {
+		if (value instanceof Integer) {
+			return (Integer) value;
+		} else if (value instanceof String) {
+			try {
+				return Integer.parseInt((String) value);
+			} catch (NumberFormatException e) {
+				return 0;
+			}
+		}
+		return 0;
+	}
+
+	private double parseDoubleValue(Object value) {
+		if (value instanceof Double) {
+			return (Double) value;
+		} else if (value instanceof String) {
+			try {
+				return Double.parseDouble((String) value);
+			} catch (NumberFormatException e) {
+				return 0;
+			}
+		}
+		return 0;
+	}
+
 	private void updateCartItem(int row) {
 		String productName = (String) cartTableModel.getValueAt(row, 0);
-		int newQuantity = (int) cartTableModel.getValueAt(row, 1);
-		String discountStr = (String) cartTableModel.getValueAt(row, 3);
 
-		double discountPercent = 0;
-		try {
-			discountPercent = Double.parseDouble(discountStr);
-		} catch (NumberFormatException e) {
-			discountPercent = 0;
-		}
+		// Safely parse quantity
+		Object qtyObj = cartTableModel.getValueAt(row, 1);
+		int newQuantity = parseQuantity(qtyObj);
+
+		// Safely parse discount
+		Object discObj = cartTableModel.getValueAt(row, 3);
+		double discountPercent = parseDoubleValue(discObj);
 
 		// Find and update cart item
 		for (CartItem item : currentBill.getItems()) {
@@ -337,6 +358,15 @@ public class BillingUI extends JDialog {
 					currentBill.removeItem(currentBill.getItems().indexOf(item));
 					cartTableModel.removeRow(row);
 				} else {
+					// Check if quantity exceeds available stock
+					if (newQuantity > item.getProduct().getQuantity()) {
+						JOptionPane.showMessageDialog(this,
+								"Insufficient stock! Available: " + item.getProduct().getQuantity(), "Stock Alert",
+								JOptionPane.WARNING_MESSAGE);
+						cartTableModel.setValueAt(item.getQuantity(), row, 1);
+						return;
+					}
+
 					item.setQuantity(newQuantity);
 					item.setDiscountPercent(discountPercent);
 					cartTableModel.setValueAt(String.format("₹%.2f", item.getTotal()), row, 4);
@@ -354,14 +384,19 @@ public class BillingUI extends JDialog {
 			currentBill.removeItem(selectedRow);
 			cartTableModel.removeRow(selectedRow);
 			updateBillSummary();
+		} else {
+			JOptionPane.showMessageDialog(this, "Please select an item to remove!");
 		}
 	}
 
 	private void clearCart() {
-		currentBill = new Bill();
-		currentBill.setSoldBy(authService.getCurrentUser().getFullName());
-		cartTableModel.setRowCount(0);
-		updateBillSummary();
+		int confirm = JOptionPane.showConfirmDialog(this, "Clear entire cart?", "Confirm", JOptionPane.YES_NO_OPTION);
+		if (confirm == JOptionPane.YES_OPTION) {
+			currentBill = new Bill();
+			currentBill.setSoldBy(authService.getCurrentUser().getFullName());
+			cartTableModel.setRowCount(0);
+			updateBillSummary();
+		}
 	}
 
 	private void updateBillSummary() {
@@ -521,8 +556,6 @@ public class BillingUI extends JDialog {
 			currentBill.setUpiTransactionId(txnId);
 			currentBill.setPaymentStatus("PAID");
 			currentBill.setPaidAmount(currentBill.getGrandTotal());
-
-			// Note: Grand total is calculated automatically, not set directly
 
 			// Process sale
 			boolean success = true;

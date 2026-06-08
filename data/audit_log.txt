@@ -88,3 +88,11 @@
 [2026-06-06 23:50:24] SELL | User: admin | Details: HP Wireless Mouse | Count: 37 | Amount: ₹1245.00
 [2026-06-06 23:50:24] BILL | User: admin | Details: INV-20260606-D2F96A76 | Count: 3 | Amount: ₹89851.00
 [2026-06-06 23:53:46] UPDATE | User: admin | Details: HP Wireless Mouse | Count: 0 | Amount: ₹1245.00
+[2026-06-07 20:20:22] SELL | User: admin | Details: Parle-G Biscuit | Count: 3 | Amount: ₹555.00
+[2026-06-07 20:20:22] SELL | User: admin | Details: Bajaj Mixer Grinder | Count: 1 | Amount: ₹1594.00
+[2026-06-07 20:20:22] SELL | User: admin | Details: Syska LED Tube | Count: 9 | Amount: ₹1605.00
+[2026-06-07 20:20:22] BILL | User: admin | Details: INV-20260607-0D029CF6 | Count: 3 | Amount: ₹20891.00
+[2026-06-07 20:40:36] SELL | User: admin | Details: SanDisk 128GB Pendrive | Count: 5 | Amount: ₹1495.00
+[2026-06-07 20:40:36] SELL | User: admin | Details: Cello Lunch Box | Count: 5 | Amount: ₹500.00
+[2026-06-07 20:40:36] SELL | User: admin | Details: Amul Butter | Count: 10 | Amount: ₹2274.00
+[2026-06-07 20:40:36] BILL | User: admin | Details: INV-20260607-7819CBE9 | Count: 3 | Amount: ₹38604.00
